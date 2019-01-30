@@ -20,5 +20,9 @@ Lexeme *newLexemeReal(double x);
 Lexeme *newLexemeString(char *x);
 Lexeme *newLexemeVar(char *x);
 char   *getLexemeType(Lexeme *n);
+int     getLexemeIval(Lexeme *n);
+double  getLexemeRval(Lexeme *n);
+char   *getLexemeSval(Lexeme *n);
+char   *getLexemeID(Lexeme *n);
 
 #endif

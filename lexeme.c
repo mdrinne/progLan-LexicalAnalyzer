@@ -82,3 +82,30 @@ getLexemeType(Lexeme *n)
     return n->type;
 }
 
+
+int
+getLexemeIval(Lexeme *n)
+{
+    return n->ival;
+}
+
+
+double
+getLexemeRval(Lexeme *n)
+{
+    return n->rval;
+}
+
+
+char *
+getLexemeSval(Lexeme *n)
+{
+    return n->sval;
+}
+
+
+char *
+getLexemeID(Lexeme *n)
+{
+    return n->ID;
+}
