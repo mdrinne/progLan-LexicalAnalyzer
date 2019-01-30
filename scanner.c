@@ -18,8 +18,12 @@ int main(int argc, char const *argv[])
     getFile(fp);
     Lexeme *token = lex();
     while (getLexemeType(token) != END_OF_FILE)
-    {
-        printf("%s\n", getLexemeType(token));
+    {   
+        if (getLexemeType(token) == INTEGER) printf("%s %d\n",getLexemeType(token),getLexemeIval(token));
+        else if (getLexemeType(token) == REAL) printf("%s %lf\n",getLexemeType(token),getLexemeRval(token));
+        else if (getLexemeType(token) == STRING) printf("%s %s\n",getLexemeType(token),getLexemeSval(token));
+        else if (getLexemeType(token) == VARIABLE) printf("%s %s\n",getLexemeType(token),getLexemeID(token));
+        else printf("%s\n", getLexemeType(token));
         token = lex();
     }
     fclose(fp);
